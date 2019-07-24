@@ -1,0 +1,570 @@
+@charset "utf-8";
+/*
+=======================================
+	Reset CSS
+=======================================
+*/
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, main, menu, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+}
+
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section {
+	display: block;
+}
+
+html {
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	color: #59220d;
+	line-height: 1.5;
+	font-size: 14px;
+	font-family: 'Kosugi Maru', sans-serif;;
+}
+
+img {
+	border: 0;
+	max-width: 100%;
+	height: auto;
+}
+
+ul, ol {
+	list-style-type: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+img, input, select, textarea {
+	vertical-align: middle;
+}
+
+a {
+	color: #59220d;
+	transition: 0.5s;
+}
+
+a:hover {
+	color: #d53e04;
+}
+
+a:hover img {
+	opacity: 0.7;
+}
+
+/*icon
+--------------------*/
+
+@font-face {
+	font-family: 'icomoon';
+	src: url('fonts/icomoon.eot?eohczl');
+	src: url('fonts/icomoon.eot?eohczl#iefix') format('embedded-opentype'), url('fonts/icomoon.ttf?eohczl') format('truetype'), url('fonts/icomoon.woff?eohczl') format('woff'), url('fonts/icomoon.svg?eohczl#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'icomoon' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-facebook2:before {
+	content: "\ea91";
+}
+
+.icon-twitter:before {
+	content: "\ea96";
+}
+
+.icon-tumblr2:before {
+	content: "\eaba";
+}
+
+/*
+=========================================
+	Base Layout
+=========================================
+*/
+
+/* #wrap {
+	background: url("../images/stationary/back_ground/ap_da0734_m_da07342.png") repeat;
+} */
+
+#wrap {
+	background: url("../images/stationary/back_ground/p_da0722_m_da07220.jpg") repeat;
+}
+
+h1 {
+	width: 50%;
+	text-align: center;
+	background: #E7CAEE;
+	border: 3px solid skyblue;
+	border-radius: 10px;
+	margin: 10px 80px 30px;
+	font-family: 'Lobster', cursive;
+	float: left;
+}
+
+
+
+
+
+h2 {
+	font-family: 'Lobster', cursive;
+	padding-bottom: 10px;
+}
+
+/*global navigation
+--------------------*/
+
+ul.ddmenu {
+	margin: 0px;
+	/* メニューバー外側の余白(ゼロ) */
+	padding: 0px 0px 0px 0px;
+	/* メニューバー内側の余白(左に15px) */
+	background-color: #d8c7a0;
+	/* バーの背景色(濃い赤色) */
+}
+
+.ddmenux {
+	padding: 0px 10px;
+	color: white;
+	text-align: center;
+}
+
+ul.ddmenu li {
+	width: 8%;
+	/* メニュー項目の横幅(125px) */
+	display: inline-block;
+	/* ★横並びに配置する */
+	list-style-type: none;
+	/* ★リストの先頭記号を消す */
+	position: relative;
+	/* ★サブメニュー表示の基準位置にする */
+	z-index: 100;
+	font-family: 'Kosugi Maru', sans-serif;
+}
+
+ul.ddmenu a {
+	background-color: #d8c7a0;
+	/* メニュー項目の背景色(濃い赤色) */
+	color: white;
+	/* メニュー項目の文字色(白色) */
+	line-height: 40px;
+	/* メニュー項目のリンクの高さ(40px) */
+	text-align: center;
+	/* メインメニューの文字列の配置(中央寄せ) */
+	text-decoration: none;
+	/* メニュー項目の装飾(下線を消す) */
+	font-weight: bold;
+	/* 太字にする */
+	display: block;
+	/* ★項目内全域をリンク可能にする */
+}
+
+ul.ddmenu a:hover {
+	background-color: #ffdddd;
+	/* メニュー項目にマウスが載ったときの背景色(淡いピンク) */
+	color: #d8c7a0;
+	/* メニュー項目にマウスが載ったときの文字色(濃い赤色) */
+}
+
+ul.ddmenu ul {
+	margin: 0px;
+	/* ★サブメニュー外側の余白(ゼロ) */
+	padding: 0px;
+	/* ★サブメニュー内側の余白(ゼロ) */
+	display: none;
+	/* ★標準では非表示にする */
+	position: absolute;
+	/* ★絶対配置にする */
+}
+
+ul.ddmenu ul li {
+	width: 125px;
+	/* サブメニュー1項目の横幅(135px) */
+	border-top: 1px solid pink;
+	/* 項目上側の枠線(ピンク色で1pxの実線) */
+}
+
+ul.ddmenu ul li a {
+	line-height: 35px;
+	/* サブメニュー1項目の高さ(35px) */
+	text-align: left;
+	/* 文字列の配置(左寄せ) */
+	padding-left: 5px;
+	/* 文字列前方の余白(5px) */
+	font-weight: normal;
+	/* 太字にはしない */
+}
+
+ul.ddmenu ul li a:hover {
+	background-color: #ffff80;
+	/* サブメニュー項目にマウスが載ったときの背景色(淡い黄色) */
+	color: #d8c7a0;
+	/* サブメニュー項目にマウスが載ったときの文字色(濃い緑色) */
+}
+
+ul.ddmenu ul ul {
+	margin: 0px;
+	/* ★サブメニュー外側の余白(ゼロ) */
+	padding: 0px;
+	/* ★サブメニュー内側の余白(ゼロ) */
+	display: none;
+	/* ★標準では非表示にする */
+	position: absolute;
+	/* ★絶対配置にする */
+	top: -1px;
+	/* 1pxだけ上方向にずらす(※上に1pxの枠線を引いている場合) */
+	left: 100%;
+	/* ★基準位置からの距離を親ボックスの幅100％にする */
+	border-left: 1px solid pink;
+	/* 左側に引く枠線(ピンク色で1pxの実線) */
+}
+
+/* slick */
+
+.slick-prev:before, .slick-next:before {
+	color: #000;
+	font-family: 'slick';
+	font-size: 40px;
+    line-height: 1;
+	opacity: .75;
+	
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev {
+	left: 30px;
+	z-index: 100;
+	
+}
+
+.slick-next {
+	right: 30px;
+	z-index: 100;
+}
+
+
+
+/* .sankaku_left{
+	z-index: 100;
+	position: relative;
+	top:150px;
+	height: auto;
+}
+
+.sankaku_right{
+	z-index: 100;
+
+} */
+
+/*main
+--------------------*/
+
+h2 {
+	width: 270px;
+	height: 30px;
+	border: 1px solid rgb(235, 235, 148);
+	border-radius: 10px;
+	text-align: center;
+	padding-top: 1px;
+	margin: 20px 50px;
+	background: #9BE1CC;
+}
+
+.img_item {
+	width:400px;
+	padding-left:100px;
+}
+
+/*footer
+--------------------*/
+
+footer {
+	background: #d8c7a0;
+	text-align: center;
+	overflow: hidden;
+	clear: both;
+}
+
+#info {
+	width: 150px;
+	float: right;
+	/* position: relative; */
+	/* bottom: 85px;
+	right: 10px; */
+	background-color: #9BE1CC;
+	text-align: center;
+	border: 1px solid rgb(235, 235, 148);
+	border-radius: 10px;
+	margin: 20px;
+	
+}
+
+#info a {
+	color: black;
+	text-decoration: none;
+	
+}
+
+.bana li {
+	/* float: right; */
+	display: inline-block
+}
+
+
+
+.img_bana {
+
+	float: left;
+}
+
+.sns{
+	width: 150px;
+	float: right;
+	padding: 30px;
+	margin-bottom: 50px;
+}
+
+.sns li {
+	float: right;
+	
+}
+
+.sns a {
+	display: block;
+	padding: 10px;
+	background: #d8c7a0;
+	color: white;
+	border-radius: 5px;
+	font-size: 24px;
+	text-decoration: none;
+}
+
+.copy{
+	display: inline-block;
+	
+	margin-top: 30px;
+}
+
+header {
+	padding: 10px;
+	background: url("../images/stationary/back_ground/background.jpg") repeat;
+	background-position: 0px -8px;
+	
+	height: 80px;
+}
+
+#nav-drawer {
+	position: relative;
+	float: right;
+}
+
+/*チェックボックス等は非表示に*/
+
+.nav-unshown {
+	display: none;
+}
+
+/*アイコンのスペース*/
+
+#nav-open {
+	display: inline-block;
+	width: 25px;
+	height: 20px;
+	vertical-align: middle;
+	/* background:  #9BE1CC; */
+	background:  #E7CAEE;
+	border: 3px solid  skyblue;
+	border-radius: 8px;
+	padding: 4px;
+	
+}
+
+/*ハンバーガーアイコンをCSSだけで表現*/
+
+#nav-open span, #nav-open span:before, #nav-open span:after {
+	position: absolute;
+	height: 3px;
+	/*線の太さ*/
+	width: 25px;
+	/*長さ*/
+	border-radius: 3px;
+	background:black;
+	/* background: rgb(113, 148, 245); */
+	display: block;
+	content: '';
+	cursor: pointer;
+	
+}
+
+#nav-open span:before {
+	bottom: -8px;
+}
+
+#nav-open span:after {
+	bottom: -16px;
+}
+
+/*閉じる用の薄黒カバー*/
+
+#nav-close {
+	display: none;
+	/*はじめは隠しておく*/
+	position: fixed;
+	z-index: 99;
+	top: 0;
+	/*全体に広がるように*/
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: black;
+	opacity: 0;
+	transition: .3s ease-in-out;
+}
+
+/*中身*/
+
+#nav-content {
+	overflow: auto;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	/*最前面に*/
+	width: 90%;
+	/*右側に隙間を作る（閉じるカバーを表示）*/
+	max-width: 330px;
+	/*最大幅（調整してください）*/
+	height: 100%;
+	/* background:url("../images/stationary/back_ground/p_da0722_m_da07220.jpg"); */
+	background: url(../images/stationary/back_ground/background.jpg);
+	/*背景色*/
+	transition: .3s ease-in-out;
+	/*滑らかに表示*/
+	-webkit-transform: translateX(-105%);
+	transform: translateX(-105%);
+	/*左に隠しておく*/
+}
+
+#nav-content li {
+	width: 100%;
+}
+
+/*チェックが入ったらもろもろ表示*/
+
+#nav-input:checked~#nav-close {
+	display: block;
+	/*カバーを表示*/
+	opacity: .5;
+}
+
+#nav-input:checked~#nav-content {
+	-webkit-transform: translateX(0%);
+	transform: translateX(0%);
+	/*中身を表示（右へスライド）*/
+	box-shadow: 6px 0 25px rgba(0, 0, 0, .15);
+}
+
+/* メディアクエリ */
+
+@media screen and (min-width:1156px) {
+	#nav-open {
+		display: none;
+	}
+}
+
+@media screen and (max-width:1156px) {
+	#gnav {
+		display: none;
+	}
+
+	header{
+		height:100px;
+		border-bottom: 10px groove skyblue;
+	}
+}
+
+@media screen and (max-width:1156px) {
+	.bana{
+		width: 100%;
+		max-width: none;
+		text-align: left;
+	}
+	
+	.img_bana {
+		width: 80%;
+		/* float: left; */
+		display: inline-block;
+
+	}
+}
+
+/* トグル */
+
+.toggle_wrap:last-of-type {
+	border-bottom: 1px solid rgb(235, 235, 148);
+}
+
+.toggle_switch {
+	position: relative;
+	cursor: pointer;
+	padding: 5px 10px;
+	border-top: 1px solid rgb(235, 235, 148);
+}
+
+.toggle_switch.open {
+	border-bottom: 1px solid rgb(235, 235, 148);
+}
+
+.toggle_switch:hover {
+	background-color: #ffff80;
+}
+
+.toggle_switch::after {
+	content: "";
+	display: inline-block;
+	width: 18px;
+	height: 11px;
+	background: url(../img/arrow_down.svg) no-repeat center center;
+	background-size: contain;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 20px;
+	transition: transform .2s;
+}
+
+.toggle_switch.open::after {
+	transform: rotateZ(180deg);
+	top: 46%;
+}
+
+.toggle_contents {
+	display: none;
+	padding: 5px 10px;
+}
+
+/* クリアフィックス */
+
+.clearfix{
+	content:"";
+	display:block;
+	clear:both;
+}
